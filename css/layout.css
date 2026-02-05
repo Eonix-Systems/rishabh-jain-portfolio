@@ -1,0 +1,106 @@
+/* Container */
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+    /* Subtle background gradient for depth */
+    background: radial-gradient(circle at 80% 30%, rgba(0, 229, 255, 0.05) 0%, transparent 50%);
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.hero-content .greeting {
+    font-size: var(--text-base);
+    color: var(--accent-primary);
+    margin-bottom: var(--space-sm);
+    font-weight: var(--font-medium);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-content .name {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-left: -4px;
+    /* Optical alignment */
+}
+
+.hero-content .title {
+    font-size: var(--text-xl);
+    color: var(--text-secondary);
+    font-weight: var(--font-light);
+    margin-bottom: var(--space-md);
+    letter-spacing: -0.5px;
+}
+
+.hero-content .subtitle {
+    font-size: var(--text-base);
+    color: var(--text-muted);
+    font-weight: var(--font-regular);
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+}
+
+.cta-group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+/* Grid Layouts */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-md);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--space-lg);
+}
+
+/* Responsive Handling */
+@media (max-width: 768px) {
+    :root {
+        --text-4xl: 3.5rem;
+        /* Scale down for mobile */
+        --text-3xl: 2.5rem;
+        --space-xl: 4rem;
+    }
+
+    .hero-content .name {
+        margin-left: 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+    .about-content {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}

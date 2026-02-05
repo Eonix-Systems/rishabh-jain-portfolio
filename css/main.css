@@ -1,0 +1,75 @@
+@import 'variables.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'animations.css';
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    /* Browser default root size */
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Base Utility Classes */
+.text-accent {
+    color: var(--accent-primary);
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+/* Global Section Styling */
+section {
+    padding: var(--space-xl) 0;
+    min-height: auto;
+    position: relative;
+}
+
+.section-title {
+    font-size: var(--text-3xl);
+    /* Very Large Headers */
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-lg);
+    color: var(--text-primary);
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.section-title::after {
+    content: '.';
+    color: var(--accent-primary);
+}
